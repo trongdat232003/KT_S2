@@ -1,7 +1,8 @@
 <?php
 // Kết nối CSDL
 require 'config.php';
-
+// Include header
+include 'views/header.php';
 // Xử lý thêm sinh viên
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $masv = $_POST['MaSV'];
@@ -57,19 +58,6 @@ if (isset($_FILES['Hinh']) && $_FILES['Hinh']['error'] == 0) {
 </head>
 
 <body>
-    <!-- Header Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Test1</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Sinh Viên</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Học Phần</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Đăng Ký</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Đăng Nhập</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Form Thêm sinh viên -->
     <div class="container mt-5">
         <h1 class="mb-4">THÊM SINH VIÊN</h1>
@@ -109,3 +97,4 @@ if (isset($_FILES['Hinh']) && $_FILES['Hinh']['error'] == 0) {
 </body>
 
 </html>
+<?php include 'views/footer.php'; ?>

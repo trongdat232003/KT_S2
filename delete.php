@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-
+include 'views/header.php';
 // Lấy thông tin sinh viên
 $id = $_GET['id'];
 $stmt = $conn->prepare("SELECT * FROM SinhVien WHERE MaSV = ?");
@@ -44,3 +44,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </body>
 </html>
+<?php include 'views/footer.php'; ?>

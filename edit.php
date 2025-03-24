@@ -1,7 +1,8 @@
 <?php
 // Kết nối CSDL
 require 'config.php';
-
+// Include header
+include 'views/header.php';
 // Lấy thông tin sinh viên cần sửa
 $id = $_GET['id'];
 $stmt = $conn->prepare("SELECT * FROM SinhVien WHERE MaSV = ?");
@@ -101,3 +102,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </body>
 
 </html>
+<?php include 'views/footer.php'; ?>
